@@ -1,0 +1,11 @@
+.row
+  .small-10.small-centered.large-6.columns
+    .flex-video
+      = video_tag @vine.url, :size => "600x600", controls: true
+.row
+  .small-10.small-centered.large-6.columns
+    .flex-video
+      %video#camera-stream{ width: '500', autoplay: true }
+        = link_to 'Edit', edit_vine_path(@vine)
+
+= javascript_include_tag 'vines'

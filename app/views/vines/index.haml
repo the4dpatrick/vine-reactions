@@ -1,0 +1,8 @@
+%h1.text-center Vine Reactions
+.row
+  .small-12
+    %ul.small-block-grid-4.medium-block-grid-6
+      - @vines.each do |vine|
+        %li(style="text-align: center;")
+          = link_to image_tag(vine.thumb.url(:thumb)), vine, data: { no_turbolink: true }
+          = link_to truncate(vine.caption), vine, data: { no_turbolink: true }
